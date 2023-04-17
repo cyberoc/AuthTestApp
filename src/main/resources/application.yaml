@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./db/data #Pour Windows, le path est absolut i.e. jdbc:h2:file:C:/proj/data
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    defer-datasource-initialization: true
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+jwt:
+  secret: 7RgmevshDJdrhsjEZcoZsH5EXY8bPkq3IfZuyYaDIaS/4+qkyzzhLXp7U4/ctQYcuzwlXP3ocuzP6sUpF+dOZoSqeRqCbktlsMGMFmY0ZTON9CV9hg6ptuT311KylkaEnY/UUFgQ5nRgXbq5v25tLtyQRnuA04xpz74Syuz9Su55yvWmTlOb8lMWMWqTzxjzu1KnxQluFqnjtqcBvUe91s4+3zfqfw3xVFf6hQ==
+  issuer: anywr-group
+  type: JWT
+  audience: testapp
