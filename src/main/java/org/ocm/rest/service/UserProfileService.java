@@ -56,15 +56,6 @@ public class UserProfileService {
         }
     }
 
-//    public String login(String username, String password){
-//        Optional<UserProfileDTO> user = userProfileRepo.findById(username);
-//        if (user.isPresent() && pwdEnc.matches(password, user.get().getPassword())){
-//            return "Logged !";
-//        } else {
-//            return "Wrong credentials !";
-//        }
-//    }
-
     public String profile(String username){
         ObjectMapper mapper = new ObjectMapper();
         Optional<UserProfileDTO> user = userProfileRepo.findById(username);

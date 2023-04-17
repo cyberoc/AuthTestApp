@@ -92,3 +92,7 @@ Commands for dockerize
 docker build -t authtestapp:1.0 .
 docker run -p 8080:8080 --name authtestapp authtestapp:1.0
 ```
+### Resources
+- [Spring Doc](https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/jdbc.html#servlet-authentication-jdbc)
+- [Stack Overflow](https://stackoverflow.com/questions/49325692/how-to-implement-jwt-based-authentication-and-authorization-in-spring-security)
+- [Auth0](https://auth0.com/blog/spring-boot-authorization-tutorial-secure-an-api-java/)

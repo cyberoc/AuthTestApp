@@ -32,21 +32,6 @@ public class UserProfileController {
         this.userProfileService = userProfileService;
     }
 
-    /*@PostMapping("/login")
-    public ResponseEntity login(@RequestBody String body, HttpServletRequest request) {
-        try {
-            JSONObject jobj = new JSONObject(body);
-            request.login(jobj.getString("username"), jobj.getString("password"));
-        } catch (ServletException e) {
-            return new ResponseEntity("Wrong username or password", HttpStatus.UNAUTHORIZED);
-        }
-
-        Authentication auth = (Authentication) request.getUserPrincipal();
-        User user = (User) auth.getPrincipal();
-        log.info("User {} logged in", user.getUsername());
-        return ok(String.format("User logged in %s", user.getUsername()));
-    }*/
-
     @SecurityRequirement(name = "JWT")
     @PostMapping(value = "/register", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity register(@Valid @RequestBody UserProfileDTO newUser, BindingResult bindingResult) {
